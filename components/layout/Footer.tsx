@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <h3 className="text-2xl font-display font-bold mb-4">Meriri</h3>
             <p className="text-neutral-400 text-sm">
-              Jozi prices. Cape Town stock. No waiting.
+              Premium hair. Secure checkout. Nationwide delivery.
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export function Footer() {
           <div>
             <h4 className="font-medium mb-4">Get in Touch</h4>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li>Cape Town, South Africa</li>
+              <li>South Africa</li>
               <li>
                 <a
                   href="tel:+27123456789"

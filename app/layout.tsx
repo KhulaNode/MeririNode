@@ -17,11 +17,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Meriri | Premium Hair & Wigs in Cape Town",
+  title: "Meriri | Premium Hair & Wigs",
   description:
-    "Premium wigs, weaves, and hair bundles in Cape Town. Jozi prices, Cape Town stock. Human hair and synthetic options. Order on WhatsApp.",
+    "Premium wigs, weaves, and hair bundles. Shop online, pay securely with Yoco. Human hair and synthetic options. Delivered nationwide.",
   keywords: [
-    "wigs Cape Town",
+    "wigs online South Africa",
     "hair weaves South Africa",
     "human hair wigs",
     "synthetic wigs",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     "African hair",
   ],
   openGraph: {
-    title: "Meriri | Premium Hair & Wigs in Cape Town",
-    description: "Jozi prices. Cape Town stock. No waiting.",
+    title: "Meriri | Premium Hair & Wigs",
+    description: "Premium hair. One message away.",
     type: "website",
   },
 };

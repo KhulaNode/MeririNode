@@ -77,7 +77,7 @@ export function formatPrice(price: number): string {
 export function getStockUrgencyMessage(status: Product["stockStatus"]): string {
   switch (status) {
     case "Limited":
-      return "Only a few left in Cape Town";
+      return "Only a few left";
     case "Pre-Order":
       return "Pre-order now • 7 day delivery";
     case "Out of Stock":

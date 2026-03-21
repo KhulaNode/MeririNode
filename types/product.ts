@@ -42,17 +42,29 @@ export interface ProductFilters {
   inStockOnly?: boolean;
 }
 
-// Cart Types (for future implementation)
+// Cart Types
 export interface CartItem {
   product: Product;
   quantity: number;
 }
 
-// WhatsApp Message Types
-export interface WhatsAppOrderData {
-  productName: string;
-  length: number;
-  texture: string;
-  price: number;
-  deliveryMethod?: "Collection" | "Delivery";
+// Order / Checkout Types
+export interface ShippingDetails {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  address: string;
+  city: string;
+  province: string;
+  postalCode: string;
+}
+
+export interface Order {
+  orderId: string;
+  items: CartItem[];
+  shipping: ShippingDetails;
+  totalInCents: number;
+  status: "pending" | "paid" | "failed";
+  createdAt: string;
 }

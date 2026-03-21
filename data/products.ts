@@ -106,7 +106,7 @@ export const mockProducts: Product[] = [
       "/products/jerry-curl-12-1.jpg",
       "/products/jerry-curl-12-2.jpg",
     ],
-    shortDescription: "Affordable bounce. Heat-safe up to 150°C. Jozi prices, Cape Town stock.",
+    shortDescription: "Affordable bounce. Heat-safe up to 150°C. Great value, always in stock.",
     careNotes: "Do not exceed 150°C. Wash with cold water. Air dry only. No chemical processing.",
   },
   {

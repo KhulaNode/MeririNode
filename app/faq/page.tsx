@@ -12,12 +12,12 @@ const faqs: FAQItem[] = [
   {
     question: "How do I order?",
     answer:
-      "Click any 'Order on WhatsApp' button. You'll be taken to WhatsApp with a prefilled message. We'll respond quickly with payment details, collection/delivery options, and answer any questions.",
+      "Browse our shop, add items to your cart, and proceed to checkout. Enter your shipping details and pay securely with your card via Yoco. You'll receive a confirmation once your payment is processed.",
   },
   {
     question: "Where are you located?",
     answer:
-      "We're based in Cape Town, South Africa. All our stock is held locally - no waiting for imports. We offer collection in Cape Town and delivery across the Western Cape.",
+      "We're an online-first hair store serving all of South Africa. Stock is held locally and we ship nationwide — delivery straight to your door.",
   },
   {
     question: "What's the difference between human hair and synthetic?",
@@ -25,9 +25,9 @@ const faqs: FAQItem[] = [
       "Human hair wigs can be heat styled, dyed, and look most natural. They last 6-12 months with care. Synthetic wigs are pre-styled, more affordable (R799-R999), and require less maintenance but can't handle high heat. Both look great - it depends on your budget and styling needs.",
   },
   {
-    question: "Can I try before I buy?",
+    question: "Can I see more photos before buying?",
     answer:
-      "Message us on WhatsApp to arrange a viewing. We can send additional photos/videos or arrange an in-person viewing in Cape Town. We want you to feel confident before ordering.",
+      "Each product page has multiple images and detailed descriptions. If you need more info, email us at hello@meriri.co.za and we'll send through additional photos.",
   },
   {
     question: "How long do wigs last?",
@@ -37,17 +37,17 @@ const faqs: FAQItem[] = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept EFT, SnapScan, and card payments. Full payment details will be sent via WhatsApp once you place your order.",
+      "We accept all major credit and debit cards (Visa, Mastercard) via Yoco — South Africa's leading payment platform. Your card details are encrypted and never stored on our servers.",
   },
   {
     question: "Do you do installations?",
     answer:
-      "We sell the hair only. We can recommend trusted stylists in Cape Town for installation. Message us on WhatsApp for referrals.",
+      "We sell the hair only. If you need installation recommendations, email us at hello@meriri.co.za and we'll do our best to point you in the right direction.",
   },
   {
     question: "What if the color doesn't match?",
     answer:
-      "Most of our wigs come in natural black/dark brown (#1B). Human hair wigs can be colored by a professional stylist. Send us a WhatsApp message if you need specific color advice before ordering.",
+      "Most of our wigs come in natural black/dark brown (#1B). Human hair wigs can be colored by a professional stylist. Email us before ordering if you need specific color advice.",
   },
   {
     question: "How do I care for my wig?",
@@ -57,7 +57,7 @@ const faqs: FAQItem[] = [
   {
     question: "What's your return policy?",
     answer:
-      "Due to hygiene reasons, we can't accept returns on worn wigs. If you receive a damaged or incorrect product, message us immediately on WhatsApp with photos. We'll make it right.",
+      "Due to hygiene reasons, we can't accept returns on worn wigs. If you receive a damaged or incorrect product, email us immediately at hello@meriri.co.za with photos. We'll make it right.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-neutral-600">
-            Can't find your answer? Message us on WhatsApp.
+            Can&apos;t find your answer? Email us at hello@meriri.co.za
           </p>
         </div>
 
@@ -118,15 +118,14 @@ export default function FAQPage() {
             Still Have Questions?
           </h2>
           <p className="text-neutral-700 mb-6">
-            We're here to help. Message us on WhatsApp and we'll respond quickly.
+            We&apos;re here to help. Send us an email and we&apos;ll get back to
+            you quickly.
           </p>
           <a
-            href="https://wa.me/27123456789?text=Hi!%20I%20have%20a%20question"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors min-h-[48px]"
+            href="mailto:hello@meriri.co.za"
+            className="inline-flex items-center justify-center bg-neutral-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-neutral-700 transition-colors min-h-[48px]"
           >
-            Chat on WhatsApp
+            Email Us
           </a>
         </div>
       </div>
