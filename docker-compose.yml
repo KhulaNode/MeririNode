@@ -8,8 +8,8 @@ services:
     image: meriri:latest
     container_name: meriri_web
     restart: unless-stopped
-    ports:
-      - "3002:3000"
+    # ports:
+    #   - "3002:3000"
     environment:
       NODE_ENV: production
       YOCO_SECRET_KEY: ${YOCO_SECRET_KEY}
