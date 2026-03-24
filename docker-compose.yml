@@ -1,0 +1,32 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_YOCO_PUBLIC_KEY: ${NEXT_PUBLIC_YOCO_PUBLIC_KEY}
+    image: meriri:latest
+    container_name: meriri_web
+    restart: unless-stopped
+    # ports:
+    #   - "3002:3000"
+    environment:
+      NODE_ENV: production
+      YOCO_SECRET_KEY: ${YOCO_SECRET_KEY}
+    env_file:
+      - .env.local
+    networks:
+      - meriri_net
+      - khulamail_default
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3002/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+networks:
+  meriri_net:
+    driver: bridge
+  khulamail_default:
+    external: true
