@@ -13,12 +13,6 @@ services:
       YOCO_SECRET_KEY: ${YOCO_SECRET_KEY}
     networks:
       - dokploy-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.meriri-web.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.meriri-web.entrypoints=websecure"
-      - "traefik.http.routers.meriri-web.tls.certresolver=letsencrypt"
-      - "traefik.http.services.meriri-web.loadbalancer.server.port=3000"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
       interval: 30s
