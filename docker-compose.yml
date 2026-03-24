@@ -14,7 +14,7 @@ services:
       NODE_ENV: production
       YOCO_SECRET_KEY: ${YOCO_SECRET_KEY}
     env_file:
-      - .env.local
+      - .env
     networks:
       - meriri_net
       - khulamail_default
