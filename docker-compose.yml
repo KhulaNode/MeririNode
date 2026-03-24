@@ -6,18 +6,26 @@ services:
       args:
         NEXT_PUBLIC_YOCO_PUBLIC_KEY: ${NEXT_PUBLIC_YOCO_PUBLIC_KEY}
     image: meriri:latest
-    container_name: meriri_web
     restart: unless-stopped
-    # ports:
-    #   - "3002:3000"
     environment:
       NODE_ENV: production
+      NEXT_PUBLIC_YOCO_PUBLIC_KEY: ${NEXT_PUBLIC_YOCO_PUBLIC_KEY}
       YOCO_SECRET_KEY: ${YOCO_SECRET_KEY}
-    env_file:
-      - .env
+    networks:
+      - dokploy-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.meriri-web.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.meriri-web.entrypoints=websecure"
+      - "traefik.http.routers.meriri-web.tls.certresolver=letsencrypt"
+      - "traefik.http.services.meriri-web.loadbalancer.server.port=3000"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 20s
+
+networks:
+  dokploy-network:
+    external: true
